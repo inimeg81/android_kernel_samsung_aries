@@ -2805,7 +2805,7 @@ geomagnetic_input_work_func(struct work_struct *work)
 #else
 			// Don't lock if disabling as a lock is already held outside
 			// and locking again will cause a deadlock.
-			eomagnetic_multi_lock();
+			geomagnetic_multi_lock();
 			data->driver_state = state;
 			geomagnetic_multi_unlock();
 #endif
